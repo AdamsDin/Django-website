@@ -3,6 +3,7 @@ from .models import Project
 
 
 
+
 def project_index(request):
     projects = Project.objects.all()
     context = {

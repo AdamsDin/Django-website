@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'project'
+    'project.apps.ProjectConfig',
+    'blog.apps.BlogConfig'
 ]
 
 MIDDLEWARE = [
@@ -55,7 +56,7 @@ ROOT_URLCONF = 'diana_2022.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['diana_2022/templates'],
+        'DIRS': ['diana_2022/templates/project'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

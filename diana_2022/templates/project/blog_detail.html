@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<main class="container">
+  <h1>Влоги:</h1>
+  <div class="all">
+{% for Comment in coms %}
+<div class="p-5 mb-4 bg-light rounded-3">
+      <div class="container-fluid py-5">
+        <h1 class="display-5 fw-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{{Comment.post.title}}</font></font></h1>
+        <p class="col-md-8 fs-4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{{ Comment.post.body }}</font><font style="vertical-align: inherit;"></font></font></p>
+       <p>{{ Comment.post.last_modified }}</p>
+          <a href="{% url 'blog_index' Comment.pk %}"class="btn btn-primary">Посмотреть новый комментарий(1)</a>
+      </div>
+    </div>
+{% endfor %}
+</main>
+{% endblock %}
+

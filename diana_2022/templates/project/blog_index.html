@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+{% for Comment in com %}
+<div class="p-5 mb-4 bg-light rounded-3">
+      <div class="container-fluid py-3">
+        <h3 class="display-5 fw-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{{Comment.post.title}}</font></font></h3>
+          <p class="pb-3 mb-0 small lh-sm border-bottom">
+        <strong class="d-block text-gray-dark"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">@{{Comment.author}}</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+              {{Comment.body}} </font><font style="vertical-align: inherit;">
+      </font></font></p>
+          <p>{{Comment.cteated_on}}</p>
+      </div>
+    </div>
+
+  </div>
+{% endfor %}
+{% endblock %}
